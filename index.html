@@ -134,33 +134,36 @@
   section{padding:52px 0; border-top:1px solid var(--line);}
   section h2{font-size:26px; margin-bottom:22px;}
 
-  /* Parcel table */
-  table{
+/* Parcel table */
+table{
     width:100%;
     border-collapse:collapse;
-    font-size:15px;
-  }
-  thead th{
+    font-size:14px;
+    border:1px solid var(--ink);
+}
+thead th{
     text-align:left;
     font-family:Arial, sans-serif;
-    font-weight:500;
+    font-weight:600;
     font-size:12px;
-    color:var(--ink-soft);
-    padding:0 14px 10px 0;
-    border-bottom:1px solid var(--ink);
-  }
-  tbody td{
-    padding:13px 14px 13px 0;
-    border-bottom:1px solid var(--line);
-  }
-  tbody tr:last-child td{border-bottom:none;}
-  td.num, th.num{text-align:right; font-family:Arial, sans-serif;}
-  tfoot td{
-    padding:16px 14px 0 0;
+    color:var(--ink);
+    padding:8px 12px;
+    background:var(--paper-deep);
+    border:1px solid var(--ink);
+}
+tbody td{
+    padding:8px 12px;
+    border:1px solid var(--line);
+}
+tbody tr:last-child td{border-bottom:1px solid var(--line);}
+td.num, th.num{text-align:right; font-family:Arial, sans-serif;}
+tfoot td{
+    padding:10px 12px;
     font-family:Arial, sans-serif;
-    font-weight:500;
-    border-top:2px solid var(--ink);
-  }
+    font-weight:600;
+    border:1px solid var(--ink);
+    background:var(--paper-deep);
+}
   .poz{
     display:inline-block;
     font-family:Arial, sans-serif;
