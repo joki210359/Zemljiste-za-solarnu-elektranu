@@ -135,38 +135,32 @@
   section h2{font-size:26px; margin-bottom:22px;}
 
   /* Parcel table */
-  .table-scroll{
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-  }
   table{
     width:100%;
     border-collapse:collapse;
     font-size:14px;
-    border:1px solid var(--ink);
+    border:1px solid var(--line);
+    table-layout:fixed;
   }
   thead th{
     text-align:left;
     font-family:Arial, sans-serif;
     font-weight:600;
     font-size:12px;
-    color:var(--ink);
-    padding:8px 12px;
-    background:var(--paper-deep);
-    border:1px solid var(--ink);
-  }
-  tbody td{
-    padding:8px 12px;
+    color:var(--ink-soft);
+    padding:10px 12px;
     border:1px solid var(--line);
   }
-  tbody tr:last-child td{border-bottom:1px solid var(--line);}
+  tbody td{
+    padding:11px 12px;
+    border:1px solid var(--line);
+  }
   td.num, th.num{text-align:right; font-family:Arial, sans-serif;}
   tfoot td{
-    padding:10px 12px;
+    padding:12px 12px;
     font-family:Arial, sans-serif;
     font-weight:600;
-    border:1px solid var(--ink);
-    background:var(--paper-deep);
+    border:1px solid var(--line);
   }
   .poz{
     display:inline-block;
@@ -206,8 +200,9 @@
   @media (max-width:640px){
     .infra-grid{grid-template-columns:1fr;}
     .hero-figure{gap:30px;}
-    table{font-size:12.5px; min-width:520px;}
-    thead th, tbody td, tfoot td{padding:6px 8px;}
+    table{font-size:11px;}
+    thead th, tbody td, tfoot td{padding:6px 5px;}
+    .poz{font-size:10.5px; padding:1px 5px;}
   }
 
   /* CTA */
@@ -271,7 +266,6 @@
 <section id="parcele">
   <div class="wrap">
     <h2>Pregled parcela</h2>
-    <div class="table-scroll">
     <table>
       <thead>
         <tr>
@@ -294,7 +288,6 @@
         <tr><td colspan="3">Ukupno</td><td class="num">40.486 m²</td></tr>
       </tfoot>
     </table>
-    </div>
   </div>
 </section>
 
