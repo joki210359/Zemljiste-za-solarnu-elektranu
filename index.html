@@ -71,7 +71,7 @@
     margin:0;
   }
   .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
-  a{color:var(--forest);}
+  a{color:var(--forest); }
 
   /* Header / dossier strip */
   .dossier-strip{
@@ -100,7 +100,7 @@
   .hero h1{
     font-size:clamp(28px,7vw,52px);
     line-height:1.12;
-    max-width:20ch;
+    max-width:15ch;
   }
   @media (max-width:640px){
     .hero h1{
@@ -119,7 +119,7 @@
     border-top:1px solid var(--line);
     padding-top:28px;
   }
-  .hero-figure div{min-width:140px;}
+  .hero-figure div{min-width:140px; text-align:center;}
   .hero-figure .num{
     font-family:Arial, sans-serif;
     font-size:38px;
@@ -139,28 +139,29 @@
   table{
     width:100%;
     border-collapse:collapse;
-    font-size:15px;
+    font-size:14px;
+    border:1px solid var(--line);
+    table-layout:fixed;
   }
   thead th{
     text-align:left;
     font-family:Arial, sans-serif;
-    font-weight:500;
+    font-weight:600;
     font-size:12px;
     color:var(--ink-soft);
-    padding:0 14px 10px 0;
-    border-bottom:1px solid var(--ink);
+    padding:10px 12px;
+    border:1px solid var(--line);
   }
   tbody td{
-    padding:13px 14px 13px 0;
-    border-bottom:1px solid var(--line);
+    padding:11px 12px;
+    border:1px solid var(--line);
   }
-  tbody tr:last-child td{border-bottom:none;}
   td.num, th.num{text-align:right; font-family:Arial, sans-serif;}
   tfoot td{
-    padding:16px 14px 0 0;
+    padding:12px 12px;
     font-family:Arial, sans-serif;
-    font-weight:500;
-    border-top:2px solid var(--ink);
+    font-weight:600;
+    border:1px solid var(--line);
   }
   .poz{
     display:inline-block;
@@ -177,7 +178,6 @@
   .map-block img{
     width:100%;
     display:block;
-    border-radius:4px;
   }
   .map-block figcaption{
     font-size:13px;
@@ -201,6 +201,9 @@
   @media (max-width:640px){
     .infra-grid{grid-template-columns:1fr;}
     .hero-figure{gap:30px;}
+    table{font-size:11px;}
+    thead th, tbody td, tfoot td{padding:6px 5px;}
+    .poz{font-size:10.5px; padding:1px 5px;}
   }
 
   /* CTA */
@@ -208,7 +211,6 @@
     background:var(--forest-deep);
     color:var(--paper);
     border-top:none;
-    padding:52px 0;
   }
   .cta h2{color:var(--paper);}
   .cta p{color:#C9CFC5; max-width:52ch; margin-top:10px; font-size:16px;}
@@ -240,141 +242,101 @@
 </head>
 <body>
 
-  <div class="dossier-strip">
-    <div class="wrap">
-      <span>INVESTICIJSKI DOSIJE: FOTONAPONSKA ELEKTRANA</span>
-      <span>LOKACIJA: K.O. BARA, BOSANSKI PETROVAC</span>
+<div class="dossier-strip">
+  <div class="wrap">
+    <span>K.O. BARA · OPĆINA BOSANSKI PETROVAC · BiH</span>
+    <span>Katastarski podaci ažurirani: 01.08.2026.</span>
+    <span>Vlasništvo 1/1.</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="loc">PONUDA ZEMLJIŠTA ZA KONCESIJU</div>
+    <h1>Zemljište za izgradnju solarne elektrane u Bosanskom Petrovcu</h1>
+    <p class="lede">Sedam susjednih katastarskih parcela u katastarskoj općini Bara, ukupne površine 40.486 m², dostupno za koncesiju, zakup ili drugi oblik saradnje radi izgradnje solarnog parka. Lokacija ima direktan pristup javnoj cesti i planiranu tačku priključenja na distribucijsku elektroenergetsku mrežu.</p>
+
+    <div class="hero-figure">
+      <div><span class="num">40.486 m²</span><span class="cap">ukupna površina zemljišta</span></div>
+      <div><span class="num">7</span><span class="cap">katastarskih parcela</span></div>
+      <div><span class="num">~500 m</span><span class="cap">planirani kabelski vod do mreže</span></div>
     </div>
   </div>
+</header>
 
-  <main class="wrap">
-    <header class="hero">
-      <div class="loc">BOSANSKI PETROVAC — KATASTARSKA OPĆINA BARA</div>
-      <h1>Zemljište za solarnu elektranu na koncesiju</h1>
-      <p class="lede">Nudimo na koncesiju kompletno zemljište površine 40.486 m² usmjereno na izgradnju fotonaponske solarne elektrane sa visokim stepenom insolacije i osiguranom infrastrukturom.</p>
-      
-      <div class="hero-figure">
-        <div>
-          <span class="num">40.486 m²</span>
-          <span class="cap">Ukupna površina</span>
-        </div>
-        <div>
-          <span class="num">7</span>
-          <span class="cap">Katastarskih parcela</span>
-        </div>
-        <div>
-          <span class="num">20/0,4 kV</span>
-          <span class="cap">Planirana trafostanica</span>
-        </div>
+<section id="parcele">
+  <div class="wrap">
+    <h2>Pregled parcela</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Oznaka</th>
+          <th>K.č. parcele</th>
+          <th>Naziv parcele</th>
+          <th class="num">Površina (m²)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="poz">P1</span></td><td>230</td><td>Kućerina</td><td class="num">6.685</td></tr>
+        <tr><td><span class="poz">P2</span></td><td>231</td><td>Ledinjak</td><td class="num">7.399</td></tr>
+        <tr><td><span class="poz">P3</span></td><td>308</td><td>Lučica</td><td class="num">4.027</td></tr>
+        <tr><td><span class="poz">P4</span></td><td>310</td><td>Lučica</td><td class="num">3.176</td></tr>
+        <tr><td><span class="poz">P5</span></td><td>311</td><td>Lučica</td><td class="num">2.361</td></tr>
+        <tr><td><span class="poz">P6</span></td><td>313/1</td><td>Bara</td><td class="num">10.877</td></tr>
+        <tr><td><span class="poz">P7</span></td><td>313/2</td><td>Bara</td><td class="num">5.961</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="3">Ukupno</td><td class="num">40.486 m²</td></tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+<section class="map-block" id="mapa">
+  <div class="wrap">
+    <h2>Grafički prikaz parcela položaja</h2>
+    <p style="margin-top:14px;"><a href="https://maps.app.goo.gl/RHVCRXiEk1EoLe5c8" target="_blank" rel="noopener">Pogledajte lokaciju na Google mapi</a></p>
+    <figure>
+      <img src="images/parcele-mapa.png" alt="Katastarska mapa parcela P1–P7 u k.o. Bara, opština Bosanski Petrovac, uz cestu Bosanski Petrovac – Drinić" width="972" height="978">
+      <figcaption>Parcele P1–P7 označene su crvenom linijom. Cesta Bosanski Petrovac–Drinić prolazi neposredno uz i kroz kompleks parcela.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="infrastruktura">
+  <div class="wrap">
+    <h2>Infrastruktura i pristup</h2>
+    <div class="infra-grid">
+      <div>
+        <h3>Pristup lokaciji</h3>
+        <p>Pristup je osiguran postojećom javnom cestom (Bosanski Petrovac–Drinić) koja zadovoljava tehničke uvjete za transport opreme i naknadno održavanje. Zemljani radovi za polaganje kabela i temelje konstrukcija su izvodivi bez posebnih ograničenja terena.</p>
       </div>
-    </header>
-
-    <section id="parcele">
-      <h2>Pregled parcela</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Broj parcele</th>
-            <th>Katastarska općina</th>
-            <th>Kultura / Namjena</th>
-            <th class="num">Površina (m²)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="poz">Parcela 1</span></td>
-            <td>K.O. Bara</td>
-            <td>Pašnjak / Solarni park</td>
-            <td class="num">5.800</td>
-          </tr>
-          <tr>
-            <td><span class="poz">Parcela 2</span></td>
-            <td>K.O. Bara</td>
-            <td>Pašnjak / Solarni park</td>
-            <td class="num">6.250</td>
-          </tr>
-          <tr>
-            <td><span class="poz">Parcela 3</span></td>
-            <td>K.O. Bara</td>
-            <td>Oranica / Solarni park</td>
-            <td class="num">7.100</td>
-          </tr>
-          <tr>
-            <td><span class="poz">Parcela 4</span></td>
-            <td>K.O. Bara</td>
-            <td>Pašnjak / Solarni park</td>
-            <td class="num">4.500</td>
-          </tr>
-          <tr>
-            <td><span class="poz">Parcela 5</span></td>
-            <td>K.O. Bara</td>
-            <td>Pašnjak / Solarni park</td>
-            <td class="num">5.336</td>
-          </tr>
-          <tr>
-            <td><span class="poz">Parcela 6</span></td>
-            <td>K.O. Bara</td>
-            <td>Oranica / Solarni park</td>
-            <td class="num">6.000</td>
-          </tr>
-          <tr>
-            <td><span class="poz">Parcela 7</span></td>
-            <td>K.O. Bara</td>
-            <td>Pašnjak / Solarni park</td>
-            <td class="num">5.500</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Ukupna površina lokacije:</td>
-            <td class="num">40.486 m²</td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
-
-    <section class="map-block" id="mapa">
-      <h2>Mape i situacioni plan</h2>
-      <figure>
-        <img src="images/parcele-mapa.png" alt="Situacioni plan parcela za solarnu elektranu K.O. Bara">
-        <figcaption>Slika 1: Pregled 7 povezanih parcela u K.O. Bara sa pristupnim putevima.</figcaption>
-      </figure>
-    </section>
-
-    <section id="infrastruktura">
-      <h2>Infrastruktura i Mreža</h2>
-      <div class="infra-grid">
-        <div>
-          <h3>Pristupne saobraćajnice</h3>
-          <p>Lokacija ima direktan pristup na javni put, što omogućava nesmetan transport opreme i izvođenje građevinskih radova bez potrebe za privatnim služnostima.</p>
-        </div>
-        <div>
-          <h3>Elektroenergetski priključak</h3>
-          <p>Planirana je izgradnja vlastite trafostanice 20/0,4 kV. Mreža u neposrednoj blizini pruža odlične uslove za predaju proizvedene električne energije u sistem.</p>
-        </div>
+      <div>
+        <h3>Priključenje na elektroenergetsku mrežu</h3>
+        <p>Potrebna je izgradnja vlastite transformatorske stanice, te kabelskog voda dužine oko 500 m do tačke priključenja na distribucijsku mrežu.</p>
       </div>
-    </section>
-  </main>
-
-  <div class="cta" id="kontakt">
-    <div class="wrap">
-      <h2>Zainteresovani ste za koncesiju?</h2>
-      <p>Kontaktirajte nas za detaljan pregled vlasničke dokumentacije, elaborat insolacije i dogovor oko uslova koncesije.</p>
-      
-      <div class="contact-line">
-        <div><span>Lokacija:</span> Bosanski Petrovac, BiH</div>
-        <div><span>Kontakt:</span> Za upite pošaljite poruku</div>
-      </div>
-
-      <a href="mailto:vaš-email@domena.com" class="btn">Pošaljite upit za koncesiju</a>
     </div>
   </div>
+</section>
 
-  <footer>
-    <div class="wrap">
-      <p>&copy; Zemljište za solarnu elektranu K.O. Bara, Bosanski Petrovac. Sva prava zadržana.</p>
+<section class="cta" id="kontakt">
+  <div class="wrap">
+    <h2>Zainteresovani za koncesiju ili zakup?</h2>
+    <p>Vlasnik zemljišta je otvoren za razgovor o koncesiji, dugoročnom zakupu ili drugom modelu saradnje sa investitorima i koncesionarima u oblasti solarne energije. Dostupna je kompletna katastarska dokumentacija na uvid.</p>
+    <div class="contact-line">
+      <div><span>Kontakt osoba:</span> Dušan Jovanović i Zdravko Jovanović</div>
+      <div><span>Telefon:</span> +385 98 330 628 ili +387 65 677 509</div>
+      <div><span>E-mail:</span> dujovan@outlook.com ili tanjaidado@gmail.com</div>
     </div>
-  </footer>
+    <a class="btn" href="mailto:dujovan@outlook.com,tanjaidado@gmail.com">Zatražite dokumentaciju</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Zemljište, k.o. Bara, opština Bosanski Petrovac, Bosna i Hercegovina · Podaci ažurirani 01.09.2026.
+  </div>
+</footer>
 
 </body>
 </html>
